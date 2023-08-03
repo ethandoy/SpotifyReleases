@@ -2,7 +2,7 @@ from dotenv import load_dotenv
 import os
 from requests import post, get
 import json
-import datetime
+from datetime import datetime
 import auth
 
 
@@ -17,12 +17,15 @@ def get_artists_albums(token, id) -> str:
 
 if __name__ == "__main__":
     token = auth.token()
-    AJR_ID = "6s22t5Y3prQHyaHWUN1R1C"
-    albums = get_artists_albums(token, AJR_ID)
+    
+    with open("artists.json", "r") as f:
+        artists = json.load(f)
 
-    with open('res.json', 'w') as f:
-        json.dump(albums, f, indent=4)
+    for key in artists.keys():
+        albums = get_artists_albums(token, artists[key])
+        album_list = albums['items']
+        for idx, alb in enumerate(album_list):
+            print(f"{idx+1}. {key},{alb['name']} - {alb['release_date']}")
+    # with open('res.json', 'w') as f:
+    #     json.dump(albums, f, indent=4)
 
-    album_list = albums['items']
-    for idx, alb in enumerate(album_list):
-        print(f"{idx+1}. { alb['name']} , {alb['release_date']}")
