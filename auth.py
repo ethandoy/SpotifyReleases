@@ -3,7 +3,6 @@ import json
 from requests import post
 from dotenv import load_dotenv
 import os
-import Main
 
 
 def token() -> str:

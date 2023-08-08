@@ -1,16 +1,16 @@
 {
-    "album_group": "appears_on",
-    "album_type": "album",
+    "album_group": "single",
+    "album_type": "single",
     "artists": [
         {
             "external_urls": {
-                "spotify": "https://open.spotify.com/artist/79HbBkVgOVUuVhuTJ50pIx"
+                "spotify": "https://open.spotify.com/artist/5JKePhHHAtaMvBoWuULgm6"
             },
-            "href": "https://api.spotify.com/v1/artists/79HbBkVgOVUuVhuTJ50pIx",
-            "id": "79HbBkVgOVUuVhuTJ50pIx",
-            "name": "Teenage Wrist",
+            "href": "https://api.spotify.com/v1/artists/5JKePhHHAtaMvBoWuULgm6",
+            "id": "5JKePhHHAtaMvBoWuULgm6",
+            "name": "Bennett Coast",
             "type": "artist",
-            "uri": "spotify:artist:79HbBkVgOVUuVhuTJ50pIx"
+            "uri": "spotify:artist:5JKePhHHAtaMvBoWuULgm6"
         }
     ],
     "available_markets": [
@@ -200,31 +200,31 @@
         "SV"
     ],
     "external_urls": {
-        "spotify": "https://open.spotify.com/album/2Cpp5NKmwqriSjzgOuk16d"
+        "spotify": "https://open.spotify.com/album/71KLx5jfz3tTE83sKmeXYp"
     },
-    "href": "https://api.spotify.com/v1/albums/2Cpp5NKmwqriSjzgOuk16d",
-    "id": "2Cpp5NKmwqriSjzgOuk16d",
+    "href": "https://api.spotify.com/v1/albums/71KLx5jfz3tTE83sKmeXYp",
+    "id": "71KLx5jfz3tTE83sKmeXYp",
     "images": [
         {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273c3c779fce51fe3b1ad95d956",
+            "url": "https://i.scdn.co/image/ab67616d0000b273836f15d9c0255bf924d0a60d",
             "width": 640
         },
         {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02c3c779fce51fe3b1ad95d956",
+            "url": "https://i.scdn.co/image/ab67616d00001e02836f15d9c0255bf924d0a60d",
             "width": 300
         },
         {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851c3c779fce51fe3b1ad95d956",
+            "url": "https://i.scdn.co/image/ab67616d00004851836f15d9c0255bf924d0a60d",
             "width": 64
         }
     ],
-    "name": "Still Love",
+    "name": "Where Are You Going?",
     "release_date": "2023-08-04",
     "release_date_precision": "day",
-    "total_tracks": 12,
+    "total_tracks": 6,
     "type": "album",
-    "uri": "spotify:album:2Cpp5NKmwqriSjzgOuk16d"
+    "uri": "spotify:album:71KLx5jfz3tTE83sKmeXYp"
 }
