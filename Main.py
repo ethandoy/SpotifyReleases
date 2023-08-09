@@ -43,4 +43,6 @@ if __name__ == "__main__":
 
 
     # print(f"______sending message to {people[0][1]}______\n\n")
-    print(generate_message("Nina", releases=releases))
+    message_str = generate_message("Nina", releases=releases)
+    os.system(f"osascript send.scpt 7037171722 '{message_str}'")
+
