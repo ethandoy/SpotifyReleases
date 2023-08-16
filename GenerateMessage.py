@@ -4,16 +4,16 @@ import auth
 
 def generate_message(name: str, releases: list) -> str:
     msg = ""
-    msg = f"{greeting(name)}\n{new_releases(releases)}\n{song_recomendation()}\n{joke()}"
+    msg = f"{greeting(name)}\n\n{new_releases(releases)}\n\n{song_recomendation()}\n\n{joke()}"
 
     return msg
 
 def greeting(name: str) -> str:
-    return f"Good Morning {name}"
+    return f"Good Morning {name}!"
 
 def new_releases(releases: list) -> str:
     if len(releases) == 0:
-        return "No new musisc is out from your artists. Maybe Tomorrow!"
+        return "No new music is out from your artists. Maybe Tomorrow!"
     music_str = "New Music!\n"
     
     for i in releases:
@@ -42,7 +42,6 @@ def song_recomendation() -> str:
 
 
     url = base_url+limit_url+market_url+artist_url+genre_url+track_url
-    #+acousticness+danceability+energy+instrumentalness+loudness+popularity+speechiness
     header = auth.header(token=auth.token())
 
     result = get(url, headers=header)
@@ -58,7 +57,6 @@ def song_recomendation() -> str:
 
 def joke() -> str:
     joke_str =  "Today's joke:\n"
-    
     result = get("https://icanhazdadjoke.com/slack")
     json_result = result.json()
     joke = json_result["attachments"][0]["text"]
