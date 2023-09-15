@@ -8,7 +8,7 @@ import auth
 
 def load_from_txt(validate):
     artist_dict = {}
-    with open("Nina_artists.txt", "r") as f:
+    with open("artists.txt", "r") as f:
         for artist in f:
             artist = artist.replace('\n','').lower().title()
             artist_dict[artist] = get_artist_id(artist)

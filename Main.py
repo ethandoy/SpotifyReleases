@@ -17,7 +17,8 @@ def get_artists_albums(token, id) -> str:
     return json_result
 
 def get_new_releases() -> list:
-    with open("/Users/Ethan/DailyMusic/artists.json", "r") as f:
+    os_path = os.getenv("OSPATH")
+    with open(os_path + "artists.json", "r") as f:
         artists = json.load(f)
 
     releases = list()
@@ -43,10 +44,11 @@ if __name__ == "__main__":
 
     person = os.getenv("PERSON")
     phone_number = os.getenv("PHONE_NUMBER")
+    os_path = os.getenv("OSPATH")
     releases = get_new_releases()
     
     message_str = generate_message(person, releases=releases)
     # print(len(message_str))
     # print(message_str)
     # os.system(f"osascript send.scpt {Phone_number} '{message_str}'")
-    subprocess.run(["osascript", "/Users/Ethan/DailyMusic/send.scpt", phone_number, message_str])
+    subprocess.run(["osascript", os_path + "send.scpt", phone_number, message_str])
