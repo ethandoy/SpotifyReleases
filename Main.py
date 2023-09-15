@@ -17,7 +17,7 @@ def get_artists_albums(token, id) -> str:
     return json_result
 
 def get_new_releases() -> list:
-    with open("artists.json", "r") as f:
+    with open("/Users/Ethan/DailyMusic/artists.json", "r") as f:
         artists = json.load(f)
 
     releases = list()
@@ -49,4 +49,4 @@ if __name__ == "__main__":
     # print(len(message_str))
     # print(message_str)
     # os.system(f"osascript send.scpt {Phone_number} '{message_str}'")
-    subprocess.run(["osascript", "send.scpt", phone_number, message_str])
+    subprocess.run(["osascript", "/Users/Ethan/DailyMusic/send.scpt", phone_number, message_str])

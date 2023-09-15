@@ -4,7 +4,7 @@ import auth
 
 def generate_message(name: str, releases: list) -> str:
     msg = ""
-    msg = f"{greeting(name)}\n\n{new_releases(releases)}\n\n{song_recomendation()}\n\n{joke()}"
+    msg = f"{greeting(name)}\n\n{new_releases(releases)}----------\n{song_recomendation()}\n----------\n{joke()}"
 
     return msg
 
@@ -13,11 +13,11 @@ def greeting(name: str) -> str:
 
 def new_releases(releases: list) -> str:
     if len(releases) == 0:
-        return "No new music is out from your artists. Maybe Tomorrow!"
-    music_str = "New Music!\n"
+        return "No new music is out from your artists. Maybe Tomorrow!\n"
+    music_str = "New Music Out!\n"
     
     for i in releases:
-        music_str += f"{i[1]} by: {i[0]}\n"
+        music_str += f"- {i[1]} by: {i[0]}\n"
     
     return music_str
 

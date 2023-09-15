@@ -32,9 +32,9 @@ def get_artist_id(artist):
 
 def validate_result(id):
     webbrowser.open_new_tab(f"https://open.spotify.com/artist/{id}")
-    time.sleep(3)
+    input()
     
 
 if __name__ == "__main__":
-    load_from_txt(validate=False)
+    load_from_txt(validate=True)
 
