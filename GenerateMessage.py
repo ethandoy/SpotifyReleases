@@ -3,6 +3,12 @@ import json
 import auth
 
 def generate_message(name: str, releases: list) -> str:
+    """
+    Generate message string to be send via SMS or iMessage
+    :param str name: name of recipient
+    :param list releases: list of new releases
+    :return: string to be sent
+    """
     msg = ""
     msg = f"{greeting(name)}\n\n{new_releases(releases)}----------\n{song_recomendation()}\n----------\n{joke()}"
 
@@ -22,8 +28,7 @@ def new_releases(releases: list) -> str:
     return music_str
 
 def song_recomendation() -> str:
-    # TODO
-    # add paramters to the URL
+    # TODO add paramters to the URL
     base_url = 'https://api.spotify.com/v1/recommendations?'
     limit_url = 'limit=1'
     market_url = '&market=US'
@@ -37,9 +42,6 @@ def song_recomendation() -> str:
     loudness = '&target_loudness=.5'
     popularity = '&target_popularity=.5'
     speechiness = '&target_speechiness=.5'
-
-   
-
 
     url = base_url+limit_url+market_url+artist_url+genre_url+track_url
     header = auth.header(token=auth.token())
